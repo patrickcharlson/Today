@@ -1,9 +1,3 @@
-//
-//  AppDelegate.swift
-//  Today
-//
-//  Created by patrick charlson on 18/04/2025.
-//
 
 import UIKit
 
