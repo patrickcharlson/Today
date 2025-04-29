@@ -11,14 +11,12 @@ class DatePickerContentView: UIView, UIContentView {
 		}
 	}
 	
-	
 	let datePicker = UIDatePicker()
 	var configuration: UIContentConfiguration {
 		didSet {
 			configure(configuration: configuration)
 		}
 	}
-	
 	
 	init(_ configuration: UIContentConfiguration) {
 		self.configuration = configuration
@@ -28,11 +26,9 @@ class DatePickerContentView: UIView, UIContentView {
 		datePicker.preferredDatePickerStyle = .inline
 	}
 	
-	
 	required init?(coder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
-	
 	
 	func configure(configuration: UIContentConfiguration) {
 		guard let configuration = configuration as? Configuration else { return }
@@ -42,7 +38,6 @@ class DatePickerContentView: UIView, UIContentView {
 	@objc private func didPick(_ sender: UIDatePicker) {
 		guard let configuration = configuration as? DatePickerContentView.Configuration else { return }
 		configuration.onChange(sender.date)
-		
 	}
 }
 

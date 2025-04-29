@@ -11,7 +11,6 @@ class TextFieldContentView: UIView, UIContentView {
 		}
 	}
 	
-	
 	let textField = UITextField()
 	var configuration: UIContentConfiguration {
 		didSet {
