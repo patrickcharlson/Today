@@ -22,6 +22,7 @@ extension ReminderListViewController {
 			snapshot.reloadItems(ids)
 		}
 		dataSource?.apply(snapshot)
+		headerView?.progress = progress
 	}
 	
 	func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID) {
@@ -41,7 +42,6 @@ extension ReminderListViewController {
 		var backgroundConfiguration = UIBackgroundConfiguration.listCell()
 		backgroundConfiguration.backgroundColor = .todayListCellBackground
 		cell.backgroundConfiguration = backgroundConfiguration
-		
 	}
 	
 	func reminder(withId id: Reminder.ID) -> Reminder {
