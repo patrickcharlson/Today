@@ -49,7 +49,7 @@ extension UICollectionViewListCell {
 
 extension TextViewContentView: UITextViewDelegate {
 	func textViewDidChange(_ textView: UITextView) {
-		guard let configuration = configuration as? TextViewContentView.Configuration else {return}
+		guard let configuration = configuration as? TextViewContentView.Configuration else { return }
 		configuration.onChange(textView.text)
 	}
 }
